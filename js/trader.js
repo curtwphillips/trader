@@ -8,7 +8,7 @@ var trader = (function () {
   function getData (event) {
     event.preventDefault();
     // store any existing data in case the user chose to reuse it
-    var existingData; 
+    var existingData;
     if (set) {
       existingData = set.data;
     }
@@ -222,13 +222,13 @@ var trader = (function () {
   };
 
   /**
-   * trades if balances available
+   * trades if balances are available
    *
    * opts {}
    * type 'buy' or 'sell'
    * current {type, dollars, btc, price}
    */
-  trade = function (opts) {
+  function trade (opts) {
     opts.current.trade = 'stay';
     if (opts.type === 'buy') {
       // only buy if you have dollars
